@@ -42,7 +42,7 @@ Original data is taken from the downloaded file [getdata-projectfiles-UCI HAR Da
 ## Script Flow _run_analysis.R_ (PROCESS)
 1. The zipfile in the link above is downloaded to a working directory, where it is extracted.  The resulting directory structure should be identical to what is specified above.  The zipfile contains and maintains the directory structure.  Commands that rely on folders/files assume that the zip file was properly extracted.
 
-2. Source files extracted in STEP 1 would need to be loaded into R objects for some tidying. There first two R objects would contain the activity labels and features.
+#. Source files extracted in STEP 1 would need to be loaded into R objects for some tidying. There first two R objects would contain the activity labels and features.
 ~~~~
 # Read in the features.  This will be used as variables
 features <- read.table("./UCI HAR Dataset/features.txt",col.names=c("code","name"))
