@@ -43,14 +43,14 @@ Original data is taken from the downloaded file [getdata-projectfiles-UCI HAR Da
 1. The zipfile in the link above is downloaded to a working directory, where it is extracted.  The resulting directory structure should be identical to what is specified above.  The zipfile contains and maintains the directory structure.  Commands that rely on folders/files assume that the zip file was properly extracted.
 
 2. Source files extracted in STEP 1 would need to be loaded into R objects for some tidying. There first two R objects would contain the activity labels and features.
-
+    
 ~~~~
 # Read in the features.  This will be used as variables
 features <- read.table("./UCI HAR Dataset/features.txt",col.names=c("code","name"))
 # Read in the activity labels. They will be used later as replacement to the numeric activity values
 activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt",col.names=c("code","activity"))
 ~~~~
-
+    
 3. Tidy up the names from the _features.txt_.  The names will be used for the column names of the dataset, and there are characters that are either not allowed, or are not ideal for column names.  The following code strips/replaces certain characters for the character strings.
 
 ~~~~
