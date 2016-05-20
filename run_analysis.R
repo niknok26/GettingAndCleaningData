@@ -39,6 +39,10 @@ activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt",col.names=c
 # Tidy up the feature names to a more friendly  >> GOAL 4 <<
 features$name <- gsub("\\(|\\)|,","",features$name)
 features$name <- gsub("-|\\.","_",features$name)
+features$name <- gsub("^t","time_",features$name)
+features$name <- gsub("^f","FFT_",features$name)
+features$name <- gsub("BodyBody","Body",features$name)
+features$name <- gsub("^angle","angle_",features$name)
 
 
 # Load everything in one object in one go #  >> GOAL 1 <<
@@ -68,7 +72,7 @@ bigData <- bigData %>%
             # >> GOAL 3 <<
             mutate(activity = activityLabels[ bigData$activity,2 ]) %>%
             
-            # Take out columns that are not for mean() or std(), 
+            # Take out columns that are not for mean() or std() or meanFreq(), 
             # but retain the first two columns: subject (column 1) and activity (column 2).
             # Concatenate column 1 and 2 with the rest of the columns that satisfy the condition.
             # >> GOAL 2 <<
