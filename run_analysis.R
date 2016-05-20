@@ -85,4 +85,4 @@ bigData <- bigData %>%
             summarize_each(funs(mean))
 
 # Write file to tidy_output.txt
-write.csv(bigData,"./tidy_output.csv")
+write.table(bigData,"./tidy_output.txt",row.names = FALSE)

@@ -123,11 +123,11 @@ Original data is taken from the downloaded file [getdata-projectfiles-UCI HAR Da
                 summarize_each(funs(mean))
     ~~~~
 
-8. The final result data set is written to a CSV file, _tidy_output.csv_.
+8. The final result data set is written to a text file, _tidy_output.txt_.
 
     ~~~~
     # Write file to tidy_output.txt
-    write.csv(bigData,"./tidy_output.csv")
+    write.table(bigData,"./tidy_output.txt",row.names = FALSE)
     ~~~~
 
 ## New Dataset for Further Analysis (OUTPUT)
@@ -247,4 +247,4 @@ Classes 'grouped_df', 'tbl_df', 'tbl' and 'data.frame':	180 obs. of  88 variable
  $ angle_ZgravityMean                : num  -0.3524 -0.218 0.0123 0.0689 0.065 ...
 ~~~~
 
-* _tidy_output.csv_: This is the output comma delimited text file for the bigData variable.  It contains all the variables and observations with the average of the selected variabled, grouped for each subject and activity.
+* _tidy_output.txt_: This is the output text file for the bigData variable.  It contains all the variables and observations with the average of the selected variables, grouped for each subject and activity.

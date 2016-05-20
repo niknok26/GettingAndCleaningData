@@ -18,7 +18,7 @@ The script used in this activity will perform the following requirements:
 * README.md - this document
 * CodeBook.md - Contains the transformations and variables used for this activity
 * run_analysis.R - script used to transform the input data.  this is the main and only script
-* tidy_output.csv - output of the script run_analysis.R. structure is detailed in the CodeBook.md
+* tidy_output.txt - output of the script run_analysis.R. structure is detailed in the CodeBook.md
 
 For reference, the original README.txt of the source is included as appendix to this index.
 
